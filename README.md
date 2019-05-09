@@ -4,8 +4,6 @@ Proxmox VE is a complete virtualization management solution for servers. You can
 
 Due to lack of better backup functionality I prepared patches to support differential backups in Proxmox VE. These patches are in use for over a year.
 
-Currently supported versions are **3.4, 4.1, 4.2, 4.3, 4.4, 5.0, 5.1, 5.1-48**.
-
 <!--more-->
 
 ## What are differential backups?
@@ -119,7 +117,7 @@ However, if you happen to be paranoidal about backups… You should consider run
 
 In case of any problems applying or reverting patches you can always simple revert back to stock. Simply reinstall modified packages:
 
-        apt-get --reinstall install pve-manager qemu-server libpve-storage-perl
+        apt-get --reinstall install pve-manager pve-container qemu-server libpve-storage-perl 
 
 Then you can try to reapply patches once again.
 
@@ -148,6 +146,7 @@ In order to remove all leftovers you have to edit */etc/pve/vzdump.cron* and rem
 * v3'': updated patches to support PVE4.4-13 (2017-04-10)
 * v3'': updated patches to support PVE5.0 (2017-07-20)
 * v3''': updated patches to support PVE5.1 (2018-03-13)
+* Please take a look at commit stream :)
 
 ## Detailed list of changes
 
